@@ -39,7 +39,11 @@
                     <div class="prev" @click="prevSlide"></div>
                     <div class="next" @click="nextSlide"></div>
 
-                    <div class="thumb" :class="slides[imageIndex].image === slides[0].image ? 'active' : ''" @click="changeIndex(0)">
+                    <div class="thumb" v-for="slide, index in slides" :key="index" :class="slides[imageIndex].image === slides[index].image ? 'active' : ''" @click="changeIndex(index)">
+                        <img :src="slide.image" alt="slide.title">
+                    </div>
+
+                    <!-- <div class="thumb" :class="slides[imageIndex].image === slides[0].image ? 'active' : ''" @click="changeIndex(0)">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>
                     <div class="thumb" :class="slides[imageIndex].image === slides[1].image ? 'active' : ''" @click="changeIndex(1)">
@@ -53,7 +57,7 @@
                     </div>
                     <div class="thumb" :class="slides[imageIndex].image === slides[4].image ? 'active' : ''" @click="changeIndex(4)">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
