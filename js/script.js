@@ -3,6 +3,8 @@ let { createApp } = Vue;
 createApp({
     data() {
       return {
+        cycle: null,
+        cycleSet: false,
         imageIndex: 0,
         slides: [
             {
@@ -46,6 +48,26 @@ createApp({
         },
         changeIndex(num){
             this.imageIndex = num;
-        }
+        },
+        startCycle(){
+            if(!this.cycleSet){
+                this.cycle = setInterval(() => {
+                    this.nextSlide();
+                }, 3000);
+                this.cycleSet = true;
+            }
+        },
+        stopCycle(){
+            clearInterval(this.cycle);
+            this.cycleSet = false;
+        },
+        backCycle(){
+            if(!this.cycleSet){
+                this.cycle = setInterval(() => {
+                    this.prevSlide();
+                }, 3000);
+                this.cycleSet = true;
+            }
+        },
     }
 }).mount('#app');

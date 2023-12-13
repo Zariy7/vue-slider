@@ -12,6 +12,13 @@
 <body>
 
     <div id="app">
+        <header>
+            <div id="navbar">
+                <button class="btn" id="forward-cycle" @click="startCycle">Forward</button>
+                <button class="btn" id="stop-cycle" @click="stopCycle">Stop</button>
+                <button class="btn" id="backward-cycle" @click="backCycle">Backward</button>
+            </div>
+        </header>
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">

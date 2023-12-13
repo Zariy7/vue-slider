@@ -104,3 +104,35 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
+/* Navbar/Header */
+
+header{
+    height: 5rem; 
+    width: 100%;
+    background-color: rgb(49, 95, 80);
+    position: fixed;
+    z-index: 1;
+    border-bottom: 2px solid gray;
+}
+
+#navbar{
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .btn{
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    border: 3px solid black;
+    width: calc(100% / 4 - 10px);
+    padding: 20px;
+    background-color: rgb(65, 54, 114);
+    border-radius: 15%;
+}
