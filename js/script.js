@@ -43,7 +43,9 @@ createApp({
                 this.imageIndex-=this.slides.length;
             }
             //console.log(`${this.slides[this.imageIndex].image}`);
+        },
+        changeIndex(num){
+            this.imageIndex = num;
         }
-
     }
 }).mount('#app');
