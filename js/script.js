@@ -31,6 +31,9 @@ createApp({
         ],
       }
     },
+    created(){
+        this.startCycle();
+    },
     methods: {
         prevSlide(){
             this.imageIndex--;
